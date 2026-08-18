@@ -1,10 +1,34 @@
-### IntelliJ IDEA ###
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-.kotlin
+# Compiled class file (컴파일된 클래스 파일)
+*.class
 
-### Eclipse ###
+# Log file (로그 파일)
+*.log
+
+# Package Files (패키지 및 압축 파일)
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs (자바 에러 로그)
+hs_err_pid*
+replay_pid*
+
+# IDE settings (에디터 개인 설정 파일 - 필수로 가려야 함!)
+# VS Code
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+*.iws
+*.ipr
+
+# Eclipse
 .apt_generated
 .classpath
 .factorypath
@@ -13,18 +37,24 @@ out/
 .springBeans
 .sts4-cache
 bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# Build Tools (빌드 도구 찌꺼기 파일)
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
 
-### VS Code ###
-.vscode/
+# Gradle
+.gradle/
+build/
 
-### Mac OS ###
+# OS specific files (운영체제 자동 생성 파일)
 .DS_Store
+Thumbs.db
