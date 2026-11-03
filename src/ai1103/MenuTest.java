@@ -12,101 +12,168 @@ public class MenuTest extends JFrame {
     JTextArea textArea = new JTextArea();
     JFileChooser fileChooser = new JFileChooser();
     JFrame frame;
+    JButton[] btns = new JButton[6];
+    String[] iconFileNames = {"new", "open", "close"};
+    Color[] colorNames = {Color.WHITE, Color.BLUE, Color.MAGENTA};
 
     public MenuTest() {
         frame = this;
-        JScrollPane scrollPane = new JScrollPane(textArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+
+        JScrollPane scrollPane = new JScrollPane(textArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         add(scrollPane);
+
+        JToolBar toolBar = new JToolBar();
+        add("North", toolBar);
+
+        for (int i = 0; i < btns.length; i++) {
+            if (i < 3) {
+                btns[i] = new JButton(new ImageIcon("toolbar/" + iconFileNames[i] + ".jpg"));
+            } else {
+                btns[i] = new JButton("        ");
+                btns[i].setBackground(colorNames[i - 3]);
+            }
+            btns[i].addActionListener(btnListener);
+            toolBar.add(btns[i]);
+        }
+
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
+
         JMenu fileMenu = new JMenu("File");
         JMenu editMenu = new JMenu("Edit");
         menuBar.add(fileMenu);
         menuBar.add(editMenu);
 
-        JMenuItem newMenuItem = new JMenuItem("New"); //textArea의 문자열을 초기화
-        JMenuItem openMenuItem = new JMenuItem("Open"); // JFileChooser(showOpenDialog()사용)
-        JMenuItem closeMenuItem = new JMenuItem("Close");// System.EXIT
+        JMenuItem newMenuItem = new JMenuItem("New");
+        JMenuItem openMenuItem = new JMenuItem("Open");
+        JMenuItem closeMenuItem = new JMenuItem("Close");
+        JMenuItem saveDraftMenuItem = new JMenuItem("Save as temporary");
+
         fileMenu.add(newMenuItem);
         fileMenu.add(openMenuItem);
         fileMenu.add(closeMenuItem);
-
-        newMenuItem.addActionListener(fileListener);
-        openMenuItem.addActionListener(fileListener);
-        closeMenuItem.addActionListener(fileListener);
+        fileMenu.add(saveDraftMenuItem);
 
         JMenuItem whiteMenuItem = new JMenuItem("White");
         JMenuItem blueMenuItem = new JMenuItem("Blue");
         JMenuItem magentaMenuItem = new JMenuItem("Magenta");
+
         editMenu.add(whiteMenuItem);
         editMenu.add(blueMenuItem);
         editMenu.add(magentaMenuItem);
+
+        newMenuItem.addActionListener(fileListener);
+        openMenuItem.addActionListener(fileListener);
+        closeMenuItem.addActionListener(fileListener);
+        saveDraftMenuItem.addActionListener(fileListener);
 
         whiteMenuItem.addActionListener(backgroundListener);
         blueMenuItem.addActionListener(backgroundListener);
         magentaMenuItem.addActionListener(backgroundListener);
 
-        SetFrame.setFrame(this, "메뉴만들기", 500, 500);
+        SetFrame.setFrame(this, "메뉴 만들기", 500, 500);
+    }
+
+    ActionListener backgroundListener = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JMenuItem eItem = (JMenuItem) e.getSource();
+
+            switch (eItem.getText()) {
+                case "White":
+                    textArea.setBackground(Color.WHITE);
+                    break;
+                case "Blue":
+                    textArea.setBackground(Color.BLUE);
+                    break;
+                case "Magenta":
+                    textArea.setBackground(Color.MAGENTA);
+                    break;
+            }
+
+        }
+    };
+
+    public String readFile(File selectedFile) {
+        String totalLines = "";
+        try {
+            String line = "";
+            FileReader fr = new FileReader(selectedFile);
+            BufferedReader br = new BufferedReader(fr);
+            while ((line = br.readLine()) != null) {
+                totalLines += line + "\n";
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        return totalLines;
+    }
+
+    public void saveDraftFile(String currentString) {
+        try {
+            FileWriter fw = new FileWriter("temp.txt");
+            fw.write(currentString);
+
+            fw.close();
+            System.out.println("temp.txt에 내용이 저장되었습니다.");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     ActionListener fileListener = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
             File selectedFile;
-            switch (e.getActionCommand()){
+            JMenuItem eItem = (JMenuItem) e.getSource();
+
+            switch (eItem.getText()) {
                 case "New":
-                    textArea.setText("");
+                    textArea.setText(null);
                     break;
                 case "Open":
                     fileChooser.showOpenDialog(frame);
                     selectedFile = fileChooser.getSelectedFile();
-                    textArea.setText(redFile(selectedFile));
+                    textArea.setText(readFile(selectedFile));
                     break;
                 case "Close":
                     System.exit(0);
                     break;
+                case "Save as temporary":
+                    saveDraftFile(textArea.getText());
+                    break;
             }
         }
     };
 
-    ActionListener backgroundListener = new ActionListener() {
+    ActionListener btnListener = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            Color color = null;
-            switch (e.getActionCommand()){
-                case "White":
-                    color = Color.WHITE;
-                    break;
-                case "Blue":
-                    color = Color.BLUE;
-                    break;
-                case "Magenta":
-                    color = Color.MAGENTA;
-                    break;
+            File selectedFile;
+            JButton eBtn = (JButton) e.getSource();
+
+            if (eBtn == btns[0]) {
+                textArea.setText(null);
+            } else if (eBtn == btns[1]) {
+                fileChooser.showOpenDialog(frame);
+                selectedFile = fileChooser.getSelectedFile();
+                textArea.setText(readFile(selectedFile));
+            } else if (eBtn == btns[2]) {
+                System.exit(0);
             }
-            textArea.setBackground(color);
+
+            for (int i = 0; i < colorNames.length; i++) {
+                if (eBtn == btns[i + 3]) {
+                    textArea.setBackground(colorNames[i]);
+                }
+            }
         }
     };
 
-    public String redFile(File selectedFile){
-        String totalLines = "";
-        try {
-            String line = "";
-            FileReader fr = new FileReader(selectedFile);
-            BufferedReader br = new BufferedReader(fr);
-            while ((line = br.readLine()) != null){
-                totalLines += line + "\n";
-            }
-        } catch (FileNotFoundException e) {
-            textArea.setText("File not found");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        return totalLines;
-    };
-
-    static void main(String[] args) {
+    public static void main(String[] args) {
         new MenuTest();
     }
 }
