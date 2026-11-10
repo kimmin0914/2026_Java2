@@ -1,0 +1,116 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="library-schema" name="릴레이션 스키마">
+    <mxGraphModel dx="1414" dy="811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="790" background="light-dark(#ffffff, #121212)" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=0;fontFamily=Malgun Gothic;fontSize=36;fontColor=#000000;fontStyle=1;fillColor=none;strokeColor=none;" value="릴레이션 스키마" vertex="1">
+          <mxGeometry height="52" width="1168" x="56" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="header-rule" parent="1" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=0;fontFamily=Malgun Gothic;fontSize=17;fontColor=#000000;fontStyle=0;fillColor=#000000;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="2" width="1168" x="56" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-publisher" parent="1" style="group;" vertex="1">
+          <mxGeometry height="197" width="336" x="56" y="183" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-publisher-title" parent="schema-publisher" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=15;fontFamily=Malgun Gothic;fontSize=20;fontColor=#000000;fontStyle=1;fillColor=#FFFFFF;strokeColor=#000000;" value="publish" vertex="1">
+          <mxGeometry height="42" width="336" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-publisher-0" parent="schema-publisher" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=5;fillColor=#FFFFFF;strokeColor=#000000;" value="publish_id" vertex="1">
+          <mxGeometry height="31" width="336" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-publisher-0-key" parent="schema-publisher" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;spacing=0;spacingLeft=0;fontFamily=Malgun Gothic;fontSize=13;fontColor=#000000;fontStyle=1;fillColor=none;strokeColor=none;" value="PK" vertex="1">
+          <mxGeometry height="21" width="39" x="13" y="47" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-publisher-1" parent="schema-publisher" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;" value="publish_name" vertex="1">
+          <mxGeometry height="31" width="336" y="73" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-publisher-2" parent="schema-publisher" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;" value="phone" vertex="1">
+          <mxGeometry height="31" width="336" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-publisher-3" parent="schema-publisher" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;" value="address" vertex="1">
+          <mxGeometry height="31" width="336" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-publisher-4" parent="schema-publisher" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;" value="manager_name" vertex="1">
+          <mxGeometry height="31" width="336" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-category" parent="1" style="group;" vertex="1">
+          <mxGeometry height="135" width="336" x="56" y="437" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-category-title" parent="schema-category" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=15;fontFamily=Malgun Gothic;fontSize=20;fontColor=#000000;fontStyle=1;fillColor=#FFFFFF;strokeColor=#000000;" value="category" vertex="1">
+          <mxGeometry height="42" width="336" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-category-0" parent="schema-category" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=5;fillColor=#FFFFFF;strokeColor=#000000;" value="category_id" vertex="1">
+          <mxGeometry height="31" width="336" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-category-0-key" parent="schema-category" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;spacing=0;spacingLeft=0;fontFamily=Malgun Gothic;fontSize=13;fontColor=#000000;fontStyle=1;fillColor=none;strokeColor=none;" value="PK" vertex="1">
+          <mxGeometry height="21" width="39" x="13" y="47" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-category-1" parent="schema-category" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;" value="category_name" vertex="1">
+          <mxGeometry height="31" width="336" y="73" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-category-2" parent="schema-category" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;" value="category_desc" vertex="1">
+          <mxGeometry height="31" width="336" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-book" parent="1" style="group;" vertex="1">
+          <mxGeometry height="259" width="413" x="811" y="257" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-book-title" parent="schema-book" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=15;fontFamily=Malgun Gothic;fontSize=20;fontColor=#000000;fontStyle=1;fillColor=#FFFFFF;strokeColor=#000000;" value="book" vertex="1">
+          <mxGeometry height="42" width="413" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-book-0" parent="schema-book" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=5;fillColor=#FFFFFF;strokeColor=#000000;" value="isbn" vertex="1">
+          <mxGeometry height="31" width="413" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-book-0-key" parent="schema-book" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;spacing=0;spacingLeft=0;fontFamily=Malgun Gothic;fontSize=13;fontColor=#000000;fontStyle=1;fillColor=none;strokeColor=none;" value="PK" vertex="1">
+          <mxGeometry height="21" width="39" x="13" y="47" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-book-1" parent="schema-book" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;" value="name" vertex="1">
+          <mxGeometry height="31" width="413" y="73" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-book-2" parent="schema-book" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;" value="author" vertex="1">
+          <mxGeometry height="31" width="413" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-book-3" parent="schema-book" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;" value="price" vertex="1">
+          <mxGeometry height="31" width="413" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-book-4" parent="schema-book" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;" value="inventory" vertex="1">
+          <mxGeometry height="31" width="413" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-book-5" parent="schema-book" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=1;fillColor=#FFFFFF;strokeColor=#000000;" value="publish_id" vertex="1">
+          <mxGeometry height="31" width="413" y="197" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-book-5-key" parent="schema-book" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;spacing=0;spacingLeft=0;fontFamily=Malgun Gothic;fontSize=13;fontColor=#000000;fontStyle=1;fillColor=none;strokeColor=none;" value="FK" vertex="1">
+          <mxGeometry height="21" width="39" x="13" y="202" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-book-6" parent="schema-book" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=67;fontFamily=Malgun Gothic;fontSize=16;fontColor=#000000;fontStyle=1;fillColor=#FFFFFF;strokeColor=#000000;" value="category_id" vertex="1">
+          <mxGeometry height="31" width="413" y="228" as="geometry" />
+        </mxCell>
+        <mxCell id="schema-book-6-key" parent="schema-book" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;spacing=0;spacingLeft=0;fontFamily=Malgun Gothic;fontSize=13;fontColor=#000000;fontStyle=1;fillColor=none;strokeColor=none;" value="FK" vertex="1">
+          <mxGeometry height="21" width="39" x="13" y="233" as="geometry" />
+        </mxCell>
+        <mxCell id="fk-supply" edge="1" parent="1" source="schema-book-5" style="noEdgeStyle=1;rounded=0;html=1;endArrow=block;endFill=1;endSize=9;exitX=0;exitY=0.5;exitPerimeter=1;entryX=1;entryY=0.5;entryPerimeter=1;strokeWidth=2;strokeColor=#000000;" target="schema-publisher-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="579" y="469.5" />
+              <mxPoint x="579" y="240.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk-classification" edge="1" parent="1" source="schema-book-6" style="noEdgeStyle=1;rounded=0;html=1;endArrow=block;endFill=1;endSize=9;exitX=0;exitY=0.5;exitPerimeter=1;entryX=1;entryY=0.5;entryPerimeter=1;strokeWidth=2;strokeColor=#000000;" target="schema-category-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="667" y="500.5" />
+              <mxPoint x="667" y="494.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="supply-label" parent="1" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=0;fontFamily=Malgun Gothic;fontSize=17;fontColor=#000000;fontStyle=1;fillColor=none;strokeColor=none;" value="공급 · 1:N" vertex="1">
+          <mxGeometry height="30" width="144" x="415" y="203" as="geometry" />
+        </mxCell>
+        <mxCell id="classification-label" parent="1" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=middle;align=left;spacing=0;spacingLeft=0;fontFamily=Malgun Gothic;fontSize=17;fontColor=#000000;fontStyle=1;fillColor=none;strokeColor=none;" value="분류 · 1:N" vertex="1">
+          <mxGeometry height="30" width="144" x="415" y="457" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
