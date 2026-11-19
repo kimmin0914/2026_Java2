@@ -1,9 +1,7 @@
 package book_management.domain;
 
-import java.util.SplittableRandom;
-
 public class Book {
-    private int isbn;
+    private String isbn;
     private String name;
     private String author;
     private int price;
@@ -11,11 +9,11 @@ public class Book {
     private String publish_name;
     private String category_name;
 
-    public int getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 
